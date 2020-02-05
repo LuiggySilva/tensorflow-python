@@ -8,9 +8,8 @@ Original file is located at
 """
 
 import tensorflow as tf
-print(tf.__version__)
 
-# Aula 001 - Constantes - Tensorflow: Sintaxe Básica
+"""> # **Aula 001** - Constantes - **Tensorflow: Sintaxe Básica**"""
 
 valor1 = tf.constant(1)
 valor2 = tf.constant(2)
@@ -37,7 +36,7 @@ with tf.Session() as sess:
   c = sess.run(concatenado)
   print(f'c - {c}') # b ' texto 1 texto 2 ' o b é de bytes literal
 
-# Aula 002 - Variáveis 01 - Tensorflow: Sintaxe Básica
+"""> # **Aula 002** - Variáveis 01 - **Tensorflow: Sintaxe Básica**"""
 
 num1 = tf.constant(15, name='num1')
 num2 = tf.constant(35, name='num2')
@@ -55,7 +54,7 @@ with tf.Session() as sess:
   sess.run(init) # Iniciando as váriaveis do tensorflow
   print(f'soma - {sess.run(soma)}')
 
-# Aula 003 - Variáveis 02 - Tensorflow: Sintaxe Básica
+"""> # **Aula 003** - Variáveis 02 - **Tensorflow: Sintaxe Básica**"""
 
 vetor = tf.constant([5, 10, 15], name='vetor')
 print(f'vetor - {vetor}')
@@ -76,7 +75,7 @@ with tf.Session() as sess:
     valor = valor + 1
     print(sess.run(valor))
 
-# Aula 004 - Adição de vetores e matrizes - Tensorflow: Sintaxe Básica
+"""> # **Aula 004** - Adição de vetores e matrizes - **Tensorflow: Sintaxe Básica**"""
 
 vetor1 = tf.constant([9, 8, 7], name='vetor1')
 vetor2 = tf.constant([1, 2, 3], name='vetor2')
@@ -110,7 +109,7 @@ with tf.Session() as sess:
   print('\n' + 'soma3')
   print(sess.run(soma3))
 
-# Aula 005 - Multiplicação de matrizes - Tensorflow: Sintaxe Básica
+"""> # **Aula 005** - Multiplicação de matrizes - **Tensorflow: Sintaxe Básica**"""
 
 mat1 = tf.constant([[1, 2], [3, 4]], name='mat1')
 mat2 = tf.constant([[-1, 3],[4, 2]], name='mat2')
@@ -131,7 +130,7 @@ with tf.Session() as sess:
   print('mult3')
   print(sess.run(mult3))
 
-# Aula 006 - Produto escalar - Tensorflow: Sintaxe Básica
+"""> # **Aula 006** - Produto escalar - **Tensorflow: Sintaxe Básica**"""
 
 # -- simulando a estrutura do exemplo 1 --
 
@@ -149,7 +148,7 @@ with tf.Session() as sess:
   print('soma')
   print(sess.run(soma))
 
-# Aula 007 - Place holders - Tensorflow: Sintaxe Básica
+"""> # **Aula 007** - Place holders - **Tensorflow: Sintaxe** Básica"""
 
 # primeiro parametro é o tipo de dado que ele vai receber e o segundo a dimenção do dado
 ph1 = tf.placeholder('float', None)
@@ -176,7 +175,7 @@ with tf.Session() as sess:
   resultado3 = sess.run(operacao3, feed_dict={ph3: [8]})
   print(resultado3)
 
-# Aula 008 - Grafos e visualização com TensorBoard - Tensorflow: Sintaxe Básica
+"""> # **Aula 008** - Grafos e visualização com TensorBoard - **Tensorflow: Sintaxe Básica**"""
 
 # Removendo ultimos grafos gerados
 tf.reset_default_graph()

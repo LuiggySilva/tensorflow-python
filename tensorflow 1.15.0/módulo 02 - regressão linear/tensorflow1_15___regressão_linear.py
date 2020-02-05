@@ -29,7 +29,7 @@ base = pd.read_csv('house-prices.csv')
 base_size = base.shape
 base.head()
 
-# Aula 009 - Regressão linear com Sklearn - Tensorflow: Regressão Linear
+"""> # **Aula 009** - Regressão linear com Sklearn - **Tensorflow: Regressão Linear**"""
 
 # -- exemplo 01: custo do plano de saúde pela idade --
 
@@ -75,7 +75,7 @@ plt.xlabel('Idade')
 plt.ylabel('Custo')
 print()
 
-# Aula 010 - Regressão linear com Tensorflow - Tensorflow: Regressão Linear
+"""> # **Aula 010** - Regressão linear com Tensorflow - **Tensorflow: Regressão Linear**"""
 
 # -- exemplo 01: custo do plano de saúde pela idade --
 
@@ -139,7 +139,7 @@ mse = mean_squared_error(custos1, previsoes1)
 print(f'MEAN ABSOLUTE ERROR - {mae}')
 print(f'MEAN SQUARE ERROR - {mse}', end='\n'*2)
 
-# Aula 011 - Previsão do preço de casas - Tensorflow: Regressão Linear
+"""> # **Aula 011** - Previsão do preço de casas - **Tensorflow: Regressão Linear**"""
 
 # recuperando a coluna com os tamanhos das casas
 tamanho_casa = base.iloc[:, 5:6].values
@@ -199,7 +199,7 @@ previsoes1 = scaler_preco.inverse_transform(previsoes)
 mae = mean_absolute_error(preco_casas1, previsoes1)
 print(f'MEAN ABSOLUTE ERROR - {mae}', end='\n'*2)
 
-# Aula 012 - Regressão linear simples com Estimators - Tensorflow: Regressão Linear
+"""> # **Aula 012** - Regressão linear simples com Estimators - **Tensorflow: Regressão Linear**"""
 
 # recuperando a coluna com os tamanhos das casas
 tamanho_casa = base.iloc[:, 5:6].values
@@ -236,7 +236,7 @@ previsoes = regressor.predict(input_fn = funcao_previsao)
 for p in previsoes:
   print(scaler_preco.inverse_transform(p['predictions']))
 
-# Aula 013 - Regressão linear multipla com Estimators - Tensorflow: Regressão Linear
+"""> # **Aula 013** - Regressão linear multipla com Estimators - **Tensorflow: Regressão Linear**"""
 
 colunas_usadas = ['price', 'bedrooms', 'bathrooms', 'sqft_living',
                   'sqft_lot', 'floors', 'waterfront', 'view', 'condition', 'grade',
@@ -302,6 +302,5 @@ valores_previsoes = scaler_preco.inverse_transform(valores_previsoes)
 preco_teste_2 = scaler_preco.inverse_transform(preco_teste_2)
 
 # comparando as previsões com os testes
-
 mae = mean_absolute_error(preco_teste_2, valores_previsoes)
 print(f'\nMEAN ABSOLUTE ERROR - {mae}')
